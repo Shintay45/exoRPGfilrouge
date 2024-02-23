@@ -12,7 +12,7 @@ namespace exoRPGfilrouge
 
         public Guerrier()
         {
-            Console.Write("Veuillez entrer votre nom :");
+            Console.Write("Veuillez entrer votre nom pour un guerrier :");
             Nom = Console.ReadLine();
 
             while (string.IsNullOrEmpty(Nom))

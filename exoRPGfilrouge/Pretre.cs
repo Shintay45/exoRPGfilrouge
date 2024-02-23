@@ -12,7 +12,7 @@ namespace exoRPGfilrouge
 
         public Pretre()
         {
-            Console.Write("Veuillez entrer votre nom :");
+            Console.Write("Veuillez entrer votre nom pour un pretre :");
             Nom = Console.ReadLine();
 
             while (string.IsNullOrEmpty(Nom))

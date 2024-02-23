@@ -12,7 +12,7 @@ namespace exoRPGfilrouge
 
         public Mage()
         {
-            Console.Write("Veuillez entrer votre nom :");
+            Console.Write("Veuillez entrer votre nom pour un mage :");
             Nom = Console.ReadLine();
 
             while (string.IsNullOrEmpty(Nom))

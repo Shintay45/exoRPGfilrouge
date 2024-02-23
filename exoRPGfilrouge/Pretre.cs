@@ -53,16 +53,16 @@ namespace exoRPGfilrouge
 
         public int Intel
         {
-            get { return _intel; }
-            set { _intel = value + 2; }
+            get { return _intel + 2; }
+            set { _intel = value; }
         }
 
         private int _sagesse;
 
         public int Sagesse
         {
-            get { return _sagesse; }
-            set { _sagesse = value + 4; }
+            get { return _sagesse + 4; }
+            set { _sagesse = value; }
         }
     }
 }

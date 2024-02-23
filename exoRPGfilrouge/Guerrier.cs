@@ -45,8 +45,8 @@ namespace exoRPGfilrouge
 
         public int Endu
         {
-            get { return _endu; }
-            set { _endu = value +3 ; }
+            get { return _endu + 3; }
+            set { _endu = value  ; }
         }
 
         private int _intel;

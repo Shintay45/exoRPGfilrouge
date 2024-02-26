@@ -7,20 +7,12 @@ using System.Threading.Tasks;
 namespace exoRPGfilrouge
 {
     internal class Mage : Personnage
-    {
-  
-
-       
-
-       
-
+    {  
         public override int Intel
         {
             get { return base.Intel + 4; }
             set { base.Intel = value; }
         }
-
-        
 
         public override int Sagesse
         {

@@ -7,19 +7,12 @@ using System.Threading.Tasks;
 namespace exoRPGfilrouge
 {
     internal class Guerrier : Personnage
-    {
-       
-       
-
-        
-
+    {       
         public override int Force
         {
             get { return base.Force + 3; }
             set { base.Force = value; }
         }
-
-       
 
         public override int Endu
         {

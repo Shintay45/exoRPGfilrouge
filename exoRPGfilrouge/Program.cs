@@ -6,9 +6,6 @@ namespace exoRPGfilrouge
         static void Main(string[] args)
         {
             
-
-
-
             Guerrier guerrier = new Guerrier();
             guerrier.ShowCharacterProfile();
             
@@ -19,10 +16,7 @@ namespace exoRPGfilrouge
 
             Pretre pretre = new Pretre();
             pretre.ShowCharacterProfile();
-            
-
-            
-         
+                              
         }
     }
 }

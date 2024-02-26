@@ -8,19 +8,12 @@ namespace exoRPGfilrouge
 {
     internal class Pretre : Personnage
     {
-       
-
-       
-
-        
 
         public override int Intel
         {
             get { return base.Intel + 2; }
             set { base.Intel = value; }
         }
-
-        
 
         public override int Sagesse
         {

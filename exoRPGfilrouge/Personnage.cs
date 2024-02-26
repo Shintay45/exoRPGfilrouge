@@ -11,19 +11,19 @@ namespace exoRPGfilrouge
 
         public string Nom { get; set; }
 
-        public Personnage()
-        {
-            Console.Write($"Veuillez entrer votre nom pour votre {this.GetType().Name}:");
-            Nom = Console.ReadLine();
+        //public Personnage()
+        //{
+        //    Console.Write($"Veuillez entrer votre nom pour votre {this.GetType().Name}:");
+        //    Nom = Console.ReadLine();
 
-            while (string.IsNullOrEmpty(Nom))
-            {
-                Console.Write("Veuillez ecrire un nom svp :");
-                Nom = Console.ReadLine();
-            }
+        //    while (string.IsNullOrEmpty(Nom))
+        //    {
+        //        Console.Write("Veuillez ecrire un nom svp :");
+        //        Nom = Console.ReadLine();
+        //    }
 
-            CreationStat();
-        }
+        //    CreationStat();
+        //}
         public void ShowCharacterProfile()
         {
             Console.WriteLine((this.GetType().Name));
@@ -49,7 +49,9 @@ namespace exoRPGfilrouge
 
         public void CreationStat()
         {
-            //RandomStats rs = new RandomStats();
+            Console.Write("Choisissez votre nom : ");
+            Nom = Console.ReadLine();
+            RandomStats rs = new RandomStats();
             Force = RandomStats.CalculStat();
             Endu = RandomStats.CalculStat();
             Intel = RandomStats.CalculStat();

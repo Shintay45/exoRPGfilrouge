@@ -28,10 +28,10 @@ namespace exoRPGfilrouge
         {
             Console.WriteLine((this.GetType().Name));
             Console.WriteLine($"Nom : {Nom}");
-            Console.WriteLine($"Force : {Force} ({_force}");
-            Console.WriteLine($"Endu : {Endu} ({_endu}");
-            Console.WriteLine($"Intel : {Intel}");
-            Console.WriteLine($"Sagesse : {Sagesse}");
+            Console.WriteLine($"Force : {Force} ({_force})");
+            Console.WriteLine($"Endu : {Endu} ({_endu})");
+            Console.WriteLine($"Intel : {Intel} ({_intel})");
+            Console.WriteLine($"Sagesse : {Sagesse} ({_sagesse})");
 
         }
         internal class RandomStats

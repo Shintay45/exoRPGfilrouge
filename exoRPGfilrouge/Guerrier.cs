@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace exoRPGfilrouge
 {
-    internal class Guerrier
+    internal class Guerrier : Personnage
     {
         public string Nom {  get; set; }
 
@@ -24,18 +24,9 @@ namespace exoRPGfilrouge
             CreationStat();
         }
 
-        public void CreationStat()
-        {
-            //RandomStats rs = new RandomStats();
-            Force = RandomStats.CalculStat();
-            Endu = RandomStats.CalculStat();
-            Intel = RandomStats.CalculStat();
-            Sagesse = RandomStats.CalculStat();
-        }
-
         private int _force;
 
-        public int Force
+        public override int Force
         {
             get { return _force + 3; }
             set { _force = value; }
@@ -43,28 +34,12 @@ namespace exoRPGfilrouge
 
         private int _endu;
 
-        public int Endu
+        public override int Endu
         {
             get { return _endu + 3; }
             set { _endu = value  ; }
         }
 
-        private int _intel;
-
-        public int Intel
-        {
-            get { return _intel; } 
-            set { _intel = value; }
-        }
-
-        private int _sagesse;
-
-        public int Sagesse
-        {
-            get { return _sagesse; }
-            set { _sagesse = value; }
-        }
-      
     }
     
 }

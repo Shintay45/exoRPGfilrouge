@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace exoRPGfilrouge
 {
-    internal class Mage
+    internal class Mage : Personnage
     {
         public string Nom { get; set; }
 
@@ -24,34 +24,9 @@ namespace exoRPGfilrouge
             CreationStat();
         }
 
-        public void CreationStat()
-        {
-            //RandomStats rs = new RandomStats();
-            Force = RandomStats.CalculStat();
-            Endu = RandomStats.CalculStat();
-            Intel = RandomStats.CalculStat();
-            Sagesse = RandomStats.CalculStat();
-        }
-
-        private int _force;
-
-        public int Force
-        {
-            get { return _force; }
-            set {  _force = value; }          
-        }
-
-        private int _endu;
-
-        public int Endu
-        {
-            get { return _endu; }
-            set { _endu = value; }
-        }
-
         private int _intel;
 
-        public int Intel
+        public override int Intel
         {
             get { return _intel + 4; }
             set { _intel = value; }
@@ -59,7 +34,7 @@ namespace exoRPGfilrouge
 
         private int _sagesse;
 
-        public int Sagesse
+        public override int Sagesse
         {
             get { return _sagesse + 2; }
             set { _sagesse = value; }

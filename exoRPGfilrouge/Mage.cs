@@ -8,36 +8,24 @@ namespace exoRPGfilrouge
 {
     internal class Mage : Personnage
     {
-        public string Nom { get; set; }
+  
 
-        public Mage()
-        {
-            Console.Write("Veuillez entrer votre nom pour un mage :");
-            Nom = Console.ReadLine();
+       
 
-            while (string.IsNullOrEmpty(Nom))
-            {
-                Console.Write("Veuillez ecrire un nom svp :");
-                Nom = Console.ReadLine();
-            }
-
-            CreationStat();
-        }
-
-        private int _intel;
+       
 
         public override int Intel
         {
-            get { return _intel + 4; }
-            set { _intel = value; }
+            get { return base.Intel + 4; }
+            set { base.Intel = value; }
         }
 
-        private int _sagesse;
+        
 
         public override int Sagesse
         {
-            get { return _sagesse + 2; }
-            set { _sagesse = value; }
+            get { return base.Sagesse + 2; }
+            set { base.Sagesse = value; }
         }
     }
 }

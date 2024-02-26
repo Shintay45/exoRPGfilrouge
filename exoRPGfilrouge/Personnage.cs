@@ -8,6 +8,32 @@ namespace exoRPGfilrouge
 {
     internal class Personnage
     {
+
+        public string Nom { get; set; }
+
+        public Personnage()
+        {
+            Console.Write($"Veuillez entrer votre nom pour votre {this.GetType().Name}:");
+            Nom = Console.ReadLine();
+
+            while (string.IsNullOrEmpty(Nom))
+            {
+                Console.Write("Veuillez ecrire un nom svp :");
+                Nom = Console.ReadLine();
+            }
+
+            CreationStat();
+        }
+        public void ShowCharacterProfile()
+        {
+            Console.WriteLine((this.GetType().Name));
+            Console.WriteLine($"Nom : {Nom}");
+            Console.WriteLine($"Force : {Force} ({_force}");
+            Console.WriteLine($"Endu : {Endu} ({_endu}");
+            Console.WriteLine($"Intel : {Intel}");
+            Console.WriteLine($"Sagesse : {Sagesse}");
+
+        }
         internal class RandomStats
         {
             public static int CalculStat()

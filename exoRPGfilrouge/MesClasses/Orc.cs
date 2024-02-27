@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace exoRPGfilrouge
+namespace exoRPGfilrouge.MesClasses
 {
     internal class Orc : Monstre
     {
@@ -21,11 +21,11 @@ namespace exoRPGfilrouge
         }
         public void CoupDeHache()
         {
-            Console.WriteLine($"le {this.GetType().Name} attaque avec un coup de hache ! ");
+            Console.WriteLine($"le {GetType().Name} attaque avec un coup de hache ! ");
         }
         public void CriDeGuerre()
         {
-            Console.WriteLine($"le {this.GetType().Name} lance un cri de guerre ! ");
+            Console.WriteLine($"le {GetType().Name} lance un cri de guerre ! ");
         }
     }
 }

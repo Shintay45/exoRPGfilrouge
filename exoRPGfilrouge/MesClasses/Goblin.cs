@@ -5,7 +5,7 @@ using System.Runtime;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace exoRPGfilrouge
+namespace exoRPGfilrouge.MesClasses
 {
     internal class Goblin : Monstre
     {
@@ -16,9 +16,9 @@ namespace exoRPGfilrouge
         }
         public void CoupDeMasse()
         {
-            Console.WriteLine($"le {this.GetType().Name} attaque avec un coup de masse, ca fait mal ! ");
+            Console.WriteLine($"le {GetType().Name} attaque avec un coup de masse, ca fait mal ! ");
         }
 
     }
-    
+
 }

@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace exoRPGfilrouge
+namespace exoRPGfilrouge.MesClasses
 {
     internal class MaPartie
     {
-        List<Monstre> rencontres = new List<Monstre>();
- 
-        
+        public List<Monstre> rencontres = new List<Monstre>();
+
+
         public void GenerationRencontres()
         {
             Random random = new Random();
-
+            Monstre monstre;
             for (int i = 0; i < 10; i++)
             {
 
@@ -22,15 +22,21 @@ namespace exoRPGfilrouge
 
                 if (Lance == 1)
                 {
-                    rencontres.Add(new Orc());
+                    monstre = new Orc();
+                    monstre.CreationStat();
+                    rencontres.Add(monstre);
                 }
                 else if (Lance == 2 || Lance == 3)
                 {
-                    rencontres.Add(new Loup());
+                    monstre = new Loup();
+                    monstre.CreationStat();
+                    rencontres.Add(monstre);
                 }
                 else
                 {
-                    rencontres.Add(new Goblin());
+                    monstre = new Goblin();
+                    monstre.CreationStat();
+                    rencontres.Add(monstre);
                 }
             }
 
@@ -40,12 +46,12 @@ namespace exoRPGfilrouge
         {
             foreach (Monstre listhorde in rencontres)
             {
-                Console.WriteLine(listhorde);
+                listhorde.ShowCharacterProfile();
             }
 
         }
 
     }
-        
+
 }
 

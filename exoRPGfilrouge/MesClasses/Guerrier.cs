@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace exoRPGfilrouge
+namespace exoRPGfilrouge.MesClasses
 {
     internal class Guerrier : Personnage
-    {       
+    {
         public override int Force
         {
             get { return base.Force + 3; }
@@ -17,9 +17,9 @@ namespace exoRPGfilrouge
         public override int Endu
         {
             get { return base.Endu + 3; }
-            set { base.Endu = value  ; }
+            set { base.Endu = value; }
         }
 
     }
-    
+
 }

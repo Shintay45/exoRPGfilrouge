@@ -9,8 +9,6 @@ namespace exoRPGfilrouge.MesClasses
 
     public abstract class Entite
     {
-        
-
         protected int _force;
 
         public virtual int Force
@@ -26,10 +24,6 @@ namespace exoRPGfilrouge.MesClasses
             get { return _endu; }
             set { _endu = value; }
         }
-
-
-
-
 
         public abstract void CreationStat();
 

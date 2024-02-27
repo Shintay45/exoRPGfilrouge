@@ -8,8 +8,6 @@ namespace exoRPGfilrouge.MesClasses
 {
     internal class Monstre : Entite
     {
-        
-
         private int _force;
 
         public override int Force
@@ -33,8 +31,6 @@ namespace exoRPGfilrouge.MesClasses
             Console.WriteLine($"Endu : {Endu} ({_endu})");
         }
      
-
-
         public override void CreationStat()
         {            
             Force = Tools.CalculStat();

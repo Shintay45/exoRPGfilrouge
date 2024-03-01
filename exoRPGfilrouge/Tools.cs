@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace exoRPGfilrouge.MesClasses
+namespace exoRPGfilrouge
 {
     internal class Tools
     {
@@ -13,10 +13,10 @@ namespace exoRPGfilrouge.MesClasses
         {
             Random random = new Random();
 
-            int stat = 0;
-            stat += random.Next(10, 21);
+            int statbase = 0;
+            statbase += random.Next(10, 21);
 
-            return stat;
+            return statbase;
         }
 
     }

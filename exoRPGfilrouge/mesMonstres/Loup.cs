@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace exoRPGfilrouge.MesClasses
+namespace exoRPGfilrouge.mesMonstres
 {
     internal class Loup : Monstre
     {
@@ -21,9 +21,7 @@ namespace exoRPGfilrouge.MesClasses
         }
         public void Morsure()
         {
-
             Console.WriteLine($"le {GetType().Name} attaque avec une morsure ! ");
-
         }
         public void Hurlement()
         {

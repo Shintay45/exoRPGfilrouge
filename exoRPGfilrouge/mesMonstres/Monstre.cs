@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace exoRPGfilrouge.MesClasses
+namespace exoRPGfilrouge.mesMonstres
 {
     internal class Monstre : Entite
     {
@@ -26,15 +26,19 @@ namespace exoRPGfilrouge.MesClasses
 
         public override void ShowCharacterProfile()
         {
-            Console.WriteLine(GetType().Name);           
+            Console.WriteLine(GetType().Name);
             Console.WriteLine($"Force : {Force} ({_force})");
             Console.WriteLine($"Endu : {Endu} ({_endu})");
+            Console.WriteLine($"point de vie : {PdVie}");
+            
         }
-     
+
         public override void CreationStat()
-        {            
+        {
             Force = Tools.CalculStat();
             Endu = Tools.CalculStat();
+            PdVie = 10;
+
         }
     }
 }

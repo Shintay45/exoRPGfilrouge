@@ -1,4 +1,5 @@
-﻿using System;
+﻿using exoRPGfilrouge.mesInterfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,10 +28,18 @@ namespace exoRPGfilrouge.mesMonstres
         public override void ShowCharacterProfile()
         {
             Console.WriteLine(GetType().Name);
-            Console.WriteLine($"Force : {Force} ({_force})");
-            Console.WriteLine($"Endu : {Endu} ({_endu})");
+            Console.WriteLine($"Force : {_force} de base | ({Force}) modifiée");
+            Console.WriteLine($"Endu : {_endu} de base | ({Endu}) modifiée");
             Console.WriteLine($"point de vie : {PdVie}");
-            
+            if (this is Ior monstreOr) 
+            {
+                Console.WriteLine($"Or : {monstreOr.Or}");
+            }
+
+
+
+
+
         }
 
         public override void CreationStat()

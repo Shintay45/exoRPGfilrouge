@@ -24,6 +24,7 @@ namespace exoRPGfilrouge.mesMonstres
         public void CoupDeMasse()
         {
             Console.WriteLine($"le {GetType().Name} attaque avec un coup de masse, ca fait mal ! ");
+            
         }
         public void TableLoot(List<Equipement> listeLoot)
         {
@@ -50,6 +51,7 @@ namespace exoRPGfilrouge.mesMonstres
             TableLoot(MaPartie.MaPartie1());
             Or = rnd.Next(0, 7);
             
+
         }
         public void AffichelootGoblin()
         {

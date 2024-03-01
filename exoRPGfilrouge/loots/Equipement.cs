@@ -13,4 +13,6 @@ namespace exoRPGfilrouge.loots
 
         public int Prix { get; set; }        
     }
+
+    
 }

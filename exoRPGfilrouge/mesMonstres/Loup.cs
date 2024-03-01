@@ -25,7 +25,7 @@ namespace exoRPGfilrouge.mesMonstres
         }
         public void Hurlement()
         {
-            Console.WriteLine($"le {GetType().Name} pousse un hurlement qui vous glace le sang ! ");
+            Console.WriteLine($"le {GetType().Name} pousse un hurlement qui vous glace le sang ! ");            
         }
     }
 }

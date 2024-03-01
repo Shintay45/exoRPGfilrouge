@@ -46,11 +46,13 @@ namespace exoRPGfilrouge.MesClasses
         {
             Console.WriteLine(GetType().Name);
             Console.WriteLine($"Nom : {Nom}");
-            Console.WriteLine($"Force : {Force} ({_force}) ({Bonus(Force)})");
-            Console.WriteLine($"Endu : {Endu} ({_endu}) ({Bonus(Endu)})");
-            Console.WriteLine($"Intel : {Intel} ({_intel}) ({Bonus(Intel)})");
-            Console.WriteLine($"Sagesse : {Sagesse} ({_sagesse}) ({Bonus(Sagesse)})");
-            Console.WriteLine($"point de vie : {PdVie} ({_pdVie})");
+            Console.WriteLine($"Force : ({_force}) de base | ({Force}) modifiée |({Bonus(Force)}) de modificateur");
+            Console.WriteLine($"Endu : ({_endu}) de base | ({Endu}) modifiée | ({Bonus(Endu)}) de modificateur");
+            Console.WriteLine($"Intel : {_intel}) de base | ( {Intel} ) modifiée | ( {Bonus(Intel)} ) de modificateur");
+            Console.WriteLine($"Sagesse : {_sagesse}) de base | ( {Sagesse} ) modifiée | ( {Bonus(Sagesse)} ) de modificateur");
+            Console.WriteLine($"point de vie : {_pdVie} de base | ({PdVie}) modifiée ");
+            Console.WriteLine($"Or : {Or}");
+            Console.WriteLine("______________________________");
 
         }
 

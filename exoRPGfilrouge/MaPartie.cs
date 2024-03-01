@@ -94,15 +94,18 @@ namespace exoRPGfilrouge
                     case Goblin G:
                         G.CoupDeMasse();
                         G.AffichelootGoblin();
+                        Console.WriteLine("------------------------------");
                         break;
                     case Loup L:
                         L.Morsure();
                         L.Hurlement();
+                        Console.WriteLine("------------------------------");
                         break;
                     case Orc O:
                         O.CoupDeHache();
                         O.CriDeGuerre();
                         O.AfficheLootOrc();
+                        Console.WriteLine("------------------------------");
                         break;
                 }
             }

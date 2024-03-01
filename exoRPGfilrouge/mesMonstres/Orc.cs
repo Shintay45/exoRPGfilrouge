@@ -32,6 +32,7 @@ namespace exoRPGfilrouge.mesMonstres
         public void CriDeGuerre()
         {
             Console.WriteLine($"le {GetType().Name} lance un cri de guerre ! ");
+            
         }
         public override void CreationStat()
         {
@@ -39,6 +40,7 @@ namespace exoRPGfilrouge.mesMonstres
             base.CreationStat();
             TableLoot(MaPartie.MaPartie1());
             Or = rnd.Next(0, 7);
+            
         }
         public void TableLoot(List<Equipement> listeLoot)
         {

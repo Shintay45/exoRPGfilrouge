@@ -35,11 +35,6 @@ namespace exoRPGfilrouge.mesMonstres
             {
                 Console.WriteLine($"Or : {monstreOr.Or}");
             }
-
-
-
-
-
         }
 
         public override void CreationStat()

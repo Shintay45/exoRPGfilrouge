@@ -10,7 +10,6 @@ namespace exoRPGfilrouge
 
     public abstract class Entite
     {
-
         protected int _force;
 
         public virtual int Force

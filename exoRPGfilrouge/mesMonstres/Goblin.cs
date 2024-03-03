@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace exoRPGfilrouge.mesMonstres
 {
-    internal class Goblin : Monstre , IInventaire , Ior
+    public class Goblin : Monstre , IInventaire , Ior
     {
         public override int Force
         {
@@ -26,7 +26,7 @@ namespace exoRPGfilrouge.mesMonstres
             Console.WriteLine($"le {GetType().Name} attaque avec un coup de masse, ca fait mal ! ");
             
         }
-        public void GenererInventaire(List<Equipement> listeLoot)
+        public void GenererInventaire(List<Equipement> equipements)
         {
             Random rnd = new Random();
             Loot = new List<Equipement>();
@@ -35,11 +35,11 @@ namespace exoRPGfilrouge.mesMonstres
                 case 0:
                     break;
                 case 1:
-                    Loot.Add(listeLoot[rnd.Next(0, listeLoot.Count)]);
+                    Loot.Add(equipements[rnd.Next(0, equipements.Count)]);
                     break;
                 case 2:
-                    Loot.Add(listeLoot[rnd.Next(0, listeLoot.Count)]);
-                    Loot.Add(listeLoot[rnd.Next(0, listeLoot.Count)]);
+                    Loot.Add(equipements[rnd.Next(0, equipements.Count)]);
+                    Loot.Add(equipements[rnd.Next(0, equipements.Count)]);
                     break;
             }
 
@@ -54,9 +54,9 @@ namespace exoRPGfilrouge.mesMonstres
 
         }
 
-        public void AtribuerLoot (List<Equipement> listeLoot)
+        public void AtribuerLoot (List<Equipement> equipements)
         {
-            GenererInventaire(listeLoot);
+            GenererInventaire(equipements);
         }
         public void AffichelootGoblin()
         {

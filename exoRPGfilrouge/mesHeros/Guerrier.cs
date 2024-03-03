@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace exoRPGfilrouge.MesClasses
 {
-    internal class Guerrier : Personnage
+    public class Guerrier : Personnage
     {
         public override int Force
         {

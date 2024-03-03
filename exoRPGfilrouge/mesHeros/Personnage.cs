@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using exoRPGfilrouge;
 namespace exoRPGfilrouge.MesClasses
 {
-    public class Personnage : Entite, Ior, IInventaire
+    public class Personnage : Entite, Ior
     { 
         public string Nom { get; set; }
         protected int _intel;
@@ -28,7 +28,7 @@ namespace exoRPGfilrouge.MesClasses
         }
         
         public List<Equipement> Equipements { get; set; } = new List<Equipement>();
-        public List<Equipement> Loot { get ; set ; } = new List<Equipement>();
+        
 
         public override void CreationStat()
         {

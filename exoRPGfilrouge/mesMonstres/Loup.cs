@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace exoRPGfilrouge.mesMonstres
 {
-    internal class Loup : Monstre
+    public class Loup : Monstre
     {
         public override int Force
         {

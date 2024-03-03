@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace exoRPGfilrouge.MesClasses
 {
-    internal class Mage : Personnage
+    public class Mage : Personnage
     {
         public override int Intel
         {

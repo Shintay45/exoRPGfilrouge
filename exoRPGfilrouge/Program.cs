@@ -7,13 +7,7 @@ namespace exoRPGfilrouge
     {
         static void Main(string[] args)
         {
-
-            MaPartie maPartie = new MaPartie();
-            
-
-            
-            
-            
+            MaPartie maPartie = new MaPartie();  
         }
     }
 }

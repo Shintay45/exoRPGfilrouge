@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace exoRPGfilrouge.mesMonstres
 {
-    internal class Monstre : Entite
+    public class Monstre : Entite
     {
-        private int _force;
+        
 
         public override int Force
         {
@@ -17,7 +17,7 @@ namespace exoRPGfilrouge.mesMonstres
             set { _force = value; }
         }
 
-        private int _endu;
+        
 
         public override int Endu
         {

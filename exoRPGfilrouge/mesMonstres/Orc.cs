@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace exoRPGfilrouge.mesMonstres
 {
-    internal class Orc : Monstre , IInventaire , Ior
+    public class Orc : Monstre , IInventaire , Ior
     {
         public override int Force
         {
@@ -40,11 +40,11 @@ namespace exoRPGfilrouge.mesMonstres
             base.CreationStat();            
             Or = rnd.Next(0, 7);            
         }
-        public void AtribuerLoot(List<Equipement> listeLoot)
+        public void AtribuerLoot(List<Equipement> equipements)
         {
-            GenererInventaire(listeLoot);
+            GenererInventaire(equipements);
         }
-        public void GenererInventaire(List<Equipement> listeLoot)
+        public void GenererInventaire(List<Equipement> equipements)
         {
             Random rnd = new Random();
             Loot = new List<Equipement>();
@@ -53,11 +53,11 @@ namespace exoRPGfilrouge.mesMonstres
                 case 0:
                     break;
                 case 1:
-                    Loot.Add(listeLoot[rnd.Next(0, listeLoot.Count)]);
+                    Loot.Add(equipements[rnd.Next(0, equipements.Count)]);
                     break;
                 case 2:
-                    Loot.Add(listeLoot[rnd.Next(0, listeLoot.Count)]);
-                    Loot.Add(listeLoot[rnd.Next(0, listeLoot.Count)]);
+                    Loot.Add(equipements[rnd.Next(0, equipements.Count)]);
+                    Loot.Add(equipements[rnd.Next(0, equipements.Count)]);
                     break;
             }
         }

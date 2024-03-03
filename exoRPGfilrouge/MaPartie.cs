@@ -11,17 +11,25 @@ namespace exoRPGfilrouge
 {
     internal class MaPartie
     {
-        public List<Monstre> rencontres = new List<Monstre>();      
-        public static List< Equipement> MaPartie1()
+        Personnage joueur = new Personnage();
+        public List<Monstre> rencontres = new List<Monstre>();
+
+        List<Equipement> listeEquipement = new List<Equipement>();
+
+        public MaPartie()
         {
-            List< Equipement> listeEquipement = new List<Equipement>();
+            MaPartie1();
+            InitPerso();
+        }
+        public void MaPartie1()
+        {
 
             Arme epeeCourte = new Arme();
             epeeCourte.Nom = "Epée courte";
             epeeCourte.Prix = 15;
             epeeCourte.nbD = 1;
             epeeCourte.face = 6;
-            listeEquipement.Add( epeeCourte);
+            listeEquipement.Add(epeeCourte);
             Arme epeeLongue = new Arme();
             epeeLongue.Nom = "Epee longue";
             epeeLongue.Prix = 25;
@@ -39,7 +47,7 @@ namespace exoRPGfilrouge
             potionVie.Prix = 20;
             potionVie.nbD = 2;
             potionVie.face = 4;
-            listeEquipement.Add(potionVie);            
+            listeEquipement.Add(potionVie);
             Armure armureCuir = new Armure();
             armureCuir.Nom = "armure de cuir";
             armureCuir.Prix = 20;
@@ -49,9 +57,14 @@ namespace exoRPGfilrouge
             armurePlate.Nom = " armure en plate";
             armurePlate.Prix = 50;
             armurePlate.Defense = 5;
-            listeEquipement.Add( armurePlate);
+            listeEquipement.Add(armurePlate);
 
-            return listeEquipement;           
+
+        }
+        public void EntrerBoutique()
+        {
+
+            Boutique.Shop(listeEquipement, joueur);
         }
 
         public void GenerationRencontres()
@@ -67,6 +80,7 @@ namespace exoRPGfilrouge
                 {
                     monstre = new Orc();
                     monstre.CreationStat();
+                    ((Orc)monstre).AtribuerLoot(listeEquipement);
                     rencontres.Add(monstre);
                 }
                 else if (Lance == 2 || Lance == 3)
@@ -79,6 +93,7 @@ namespace exoRPGfilrouge
                 {
                     monstre = new Goblin();
                     monstre.CreationStat();
+                    ((Goblin)monstre).AtribuerLoot(listeEquipement);
                     rencontres.Add(monstre);
                 }
             }
@@ -110,8 +125,46 @@ namespace exoRPGfilrouge
                 }
             }
         }
-        
+        public void InitPerso()
+        {
+            
+            
+            int choix = 0;
 
+            while (choix < 1 || choix > 3)
+            {
+                Console.WriteLine("Quelle classe voulez vous jouer? :");
+                Console.WriteLine("1. Guerrier");
+                Console.WriteLine("2. Mage");
+                Console.WriteLine("3. Pretre");
+
+
+                int.TryParse(Console.ReadLine(), out choix);
+            }
+
+
+            switch (choix)
+            {
+                case 1:
+                    joueur = new Guerrier();
+                    break;
+                case 2:
+                    joueur = new Mage();
+                    break;
+                case 3:
+                    joueur = new Pretre();
+                    break;
+                default: joueur = null; break;
+            }
+
+            joueur.CreationStat();
+            joueur.ShowCharacterProfile();
+
+            
+            GenerationRencontres();
+            AfficherHorde();
+            EntrerBoutique();
+        }
     }
 }
 

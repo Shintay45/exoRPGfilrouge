@@ -37,12 +37,14 @@ namespace exoRPGfilrouge.mesMonstres
         public override void CreationStat()
         {
             Random rnd = new Random ();
-            base.CreationStat();
-            TableLoot(MaPartie.MaPartie1());
-            Or = rnd.Next(0, 7);
-            
+            base.CreationStat();            
+            Or = rnd.Next(0, 7);            
         }
-        public void TableLoot(List<Equipement> listeLoot)
+        public void AtribuerLoot(List<Equipement> listeLoot)
+        {
+            GenererInventaire(listeLoot);
+        }
+        public void GenererInventaire(List<Equipement> listeLoot)
         {
             Random rnd = new Random();
             Loot = new List<Equipement>();

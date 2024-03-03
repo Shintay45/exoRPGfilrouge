@@ -11,12 +11,7 @@ namespace exoRPGfilrouge
 
         public static int CalculStat()
         {
-            Random random = new Random();
-
-            int statbase = 0;
-            statbase += random.Next(10, 21);
-
-            return statbase;
+            return new Random().Next(10, 21);
         }
 
     }

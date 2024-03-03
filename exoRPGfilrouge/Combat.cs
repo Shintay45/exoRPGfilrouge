@@ -1,4 +1,5 @@
-﻿using System;
+﻿using exoRPGfilrouge.MesClasses;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace exoRPGfilrouge
 {
     internal class Combat
     {
-        Random rnd = new Random();
+        static Random rnd = new Random();
+        Personnage personnage = new Personnage();
     }
 }

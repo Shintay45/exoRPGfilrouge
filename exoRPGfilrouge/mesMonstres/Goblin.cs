@@ -26,7 +26,7 @@ namespace exoRPGfilrouge.mesMonstres
             Console.WriteLine($"le {GetType().Name} attaque avec un coup de masse, ca fait mal ! ");
             
         }
-        public void TableLoot(List<Equipement> listeLoot)
+        public void GenererInventaire(List<Equipement> listeLoot)
         {
             Random rnd = new Random();
             Loot = new List<Equipement>();
@@ -48,10 +48,15 @@ namespace exoRPGfilrouge.mesMonstres
         {
             Random rnd = new Random();
             base.CreationStat();
-            TableLoot(MaPartie.MaPartie1());
+            
             Or = rnd.Next(0, 7);
             
 
+        }
+
+        public void AtribuerLoot (List<Equipement> listeLoot)
+        {
+            GenererInventaire(listeLoot);
         }
         public void AffichelootGoblin()
         {

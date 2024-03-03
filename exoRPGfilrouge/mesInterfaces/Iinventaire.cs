@@ -11,7 +11,7 @@ namespace exoRPGfilrouge.mesInterfaces
     {
         List<Equipement> Loot { get; set; }
 
-        public void TableLoot(List<Equipement> listeLoot)
+        public void GenererInventaire(List<Equipement> listeLoot)
         {
             Random rnd = new Random();
             Loot= new List<Equipement>();
@@ -23,9 +23,9 @@ namespace exoRPGfilrouge.mesInterfaces
                     Loot.Add(listeLoot[rnd.Next(0, listeLoot.Count)]);
                     break;
                 case 2:
+                        Loot.Add(listeLoot[rnd.Next(0, listeLoot.Count)]);
                     Loot.Add(listeLoot[rnd.Next(0, listeLoot.Count)]);
-                    Loot.Add(listeLoot[rnd.Next(0, listeLoot.Count)]);
-                    break;
+                    break;                        
             }
         }
     }

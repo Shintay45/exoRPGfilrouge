@@ -28,7 +28,7 @@ namespace exoRPGfilrouge
         protected int _pdVie;
         public virtual int PdVie
         {
-            get { return _pdVie + Bonus(Endu); }
+            get { return _pdVie + Tools.Bonus(Endu); }
             set { _pdVie = value; }
         }
 
@@ -36,28 +36,6 @@ namespace exoRPGfilrouge
 
         public abstract void ShowCharacterProfile();
 
-        public int Bonus(int stat)
-        {
-            if (stat < 10)
-            {
-               return -1;
-            }
-            else if (stat <13)
-            {
-                return 0;
-            }
-            else if (stat < 16)
-            {
-                return 1;
-            }
-            else if (stat < 19)
-            {
-                return 2;
-            }
-            else 
-            {
-                return 3;
-            }
-        }
+        
     }
 }

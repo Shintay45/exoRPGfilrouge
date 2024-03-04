@@ -1,4 +1,5 @@
-﻿using exoRPGfilrouge.mesInterfaces;
+﻿using exoRPGfilrouge.MesClasses;
+using exoRPGfilrouge.mesInterfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,6 +44,6 @@ namespace exoRPGfilrouge.mesMonstres
             Endu = Tools.CalculStat();
             PdVie = 10;
 
-        }
+        }        
     }
 }

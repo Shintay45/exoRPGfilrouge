@@ -11,7 +11,7 @@ namespace exoRPGfilrouge
 {
     internal class MaPartie
     {
-        Personnage joueur = new Personnage();
+        public Personnage joueur = new Personnage();
         public List<Monstre> rencontres = new List<Monstre>();
 
         List<Equipement> listeEquipement = new List<Equipement>();
